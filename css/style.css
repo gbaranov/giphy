@@ -1,0 +1,26 @@
+#addAnimal{
+margin: 2px;
+}
+.btn {
+    border-width: 1px;
+    border-color: #3da7ee;
+    margin: 3px;
+}
+.word {
+    font-size: 20px;
+}
+.nav-custom {
+    background-color: #3da7ee;
+}
+#ttl {
+    font-family: 'Orbitron', sans-serif;
+    width: 100%;
+}
+p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+}
+.btn {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+}
