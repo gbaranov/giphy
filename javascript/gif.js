@@ -48,7 +48,7 @@ $(document).on("click",".animate", function() {
     
   });
 
-$('#addAnimal').on("click", function() {
+$('#addAnimal').on("click", function(event) {
     event.preventDefault();
     var animal = $('#animalForm').val();
     selection.push(animal);
