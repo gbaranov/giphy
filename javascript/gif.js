@@ -26,17 +26,26 @@ function fill(data) {
     $('#gifs').html("");
     for (var i = 0; i < data.pagination.count; i++) {
         var img = $('<img>').attr("src", data.data[i].images.fixed_width_still.url);
+        img.attr("static", data.data[i].images.fixed_width_still.url)
         img.attr("width", "240");
         img.attr("height", "200");
-        img.attr("data-alt", data.data[i].images.downsized_medium.url);
+        img.attr("dynamic", data.data[i].images.downsized_medium.url);
         img.addClass("animate");
         $('#gifs').append(img);
     }
 }
 
 $(document).on("click",".animate", function() {
-    var alt = $(this).attr("data-alt");
-    $(this).attr("src", alt);
+    var static = $(this).attr("static");
+    var dynamic = $(this).attr("dynamic");
+    if ($(this).attr("src") === $(this).attr("static")) {
+        $(this).attr("src", dynamic);
+    }
+    else {
+        $(this).attr("src", static);
+    }
+
+    
   });
 
 $('#addAnimal').on("click", function() {
@@ -46,7 +55,7 @@ $('#addAnimal').on("click", function() {
     setAnimals();
 });
 
-$('.btna').on("click", function(event){
+$(document).on("click",".btna", function(){
     event.preventDefault();
     var response = gifRequest($(this).text());
 });

@@ -24,3 +24,6 @@ p {
     font-family: 'Orbitron', sans-serif;
     font-size: 16px;
 }
+img {
+    margin: 3px;
+}
