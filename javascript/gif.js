@@ -55,7 +55,7 @@ $('#addAnimal').on("click", function() {
     setAnimals();
 });
 
-$(document).on("click",".btna", function(){
+$(document).on("click",".btna", function(event){
     event.preventDefault();
     var response = gifRequest($(this).text());
 });
