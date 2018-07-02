@@ -4,7 +4,7 @@ setAnimals();
 
 function gifRequest(animal) {
     var key = "V6qydC22ACu4zLq6xo6ZVjd8fIx9VZkG";
-    var request = $.get("http://api.giphy.com/v1/gifs/search?q="+ animal +"&api_key=" + key);
+    var request = $.get("https://api.giphy.com/v1/gifs/search?q="+ animal +"&api_key=" + key);
     
     request.done(function(data) {
         response = data;
